@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Fatima Ezzahrae Lahdili</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0c0d;
+        --line: #292b2b;
+        --text: #f2efe8;
+        --muted: #a4a49c;
+        --gold: #f0c968;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        background:
+          radial-gradient(circle at 80% 0, #262016 0, transparent 32rem),
+          var(--bg);
+      }
+      .wrap {
+        width: min(1180px, calc(100% - 72px));
+        margin: auto;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      header {
+        height: 78px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand b {
+        color: var(--gold);
+        font:
+          28px "Playfair Display",
+          serif;
+      }
+      .brand strong {
+        font-size: 12px;
+        letter-spacing: 1.3px;
+      }
+      .back {
+        color: var(--gold);
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+      .intro {
+        padding: 92px 0 57px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 30px;
+      }
+      .eyebrow {
+        color: var(--gold);
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin: 0 0 17px;
+      }
+      h1 {
+        font:
+          700 clamp(44px, 7vw, 84px)/0.95 "Playfair Display",
+          serif;
+        margin: 0;
+        letter-spacing: -2px;
+      }
+      h1 em {
+        color: var(--gold);
+        font-style: normal;
+      }
+      .intro-copy {
+        max-width: 300px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+        margin: 0 0 6px;
+      }
+      .grid {
+        padding: 43px 0 90px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+      article {
+        border: 1px solid #393a35;
+        border-radius: 7px;
+        overflow: hidden;
+        background: #111314;
+        transition: 0.25s ease;
+      }
+      article:hover {
+        transform: translateY(-5px);
+        border-color: #a9833c;
+      }
+      .visual {
+        height: 290px;
+        position: relative;
+        overflow: hidden;
+      }
+      .visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.72) saturate(0.72);
+        transition: transform 0.35s;
+      }
+      article:hover img {
+        transform: scale(1.04);
+      }
+      .number {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        color: var(--gold);
+        font:
+          16px "Playfair Display",
+          serif;
+      }
+      .details {
+        padding: 21px 22px 24px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+      }
+      .details small {
+        color: #777a73;
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+      h2 {
+        font:
+          600 24px "Playfair Display",
+          serif;
+        margin: 8px 0 16px;
+      }
+      .details p {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.6;
+        max-width: 410px;
+        margin: 0;
+      }
+      .arrow {
+        color: var(--gold);
+        font-size: 24px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 17px;
+      }
+      .tags span {
+        color: #c6c6ba;
+        background: #1c1e1e;
+        border-radius: 2px;
+        padding: 6px 8px;
+        font-size: 9px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 25px 0;
+        color: #74766f;
+        font-size: 9px;
+        letter-spacing: 0.7px;
+        display: flex;
+        justify-content: space-between;
+      }
+      @media (max-width: 700px) {
+        .wrap {
+          width: calc(100% - 36px);
+        }
+        header {
+          height: 67px;
+        }
+        .brand strong {
+          font-size: 10px;
+        }
+        .intro {
+          padding: 58px 0 38px;
+          display: block;
+        }
+        .intro-copy {
+          margin-top: 23px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+          padding-top: 27px;
+        }
+        .visual {
+          height: 235px;
+        }
+        footer {
+          gap: 15px;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="wrap">
+      <a class="brand" href="/"
+        ><b>FEL</b><strong>FATIMA EZZAHRAE LAHDILI</strong></a
+      ><a class="back" href="/">← BACK TO HOME</a>
+    </header>
+    <main class="wrap">
+      <section class="intro">
+        <div>
+          <p class="eyebrow">SELECTED WORK / 2024 — 2026</p>
+          <h1>Things I've<br /><em>built.</em></h1>
+        </div>
+        <p class="intro-copy">
+          A collection of digital products built with care, curiosity and a
+          sharp eye for detail.
+        </p>
+      </section>
+      <section class="grid">
+        <article>
+          <div class="visual">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85"
+              alt="Financia Dashboard"
+            /><span class="number">01</span>
+          </div>
+          <div class="details">
+            <div>
+              <small>FINTECH / PRODUCT</small>
+              <h2>Financia Dashboard</h2>
+              <p>
+                A focused financial workspace that turns complex data into
+                clear, actionable insights.
+              </p>
+              <div class="tags">
+                <span>React</span><span>Chart.js</span><span>Tailwind CSS</span>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </div>
+        </article>
+        <article>
+          <div class="visual">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+              alt="Real Estate Platform"
+            /><span class="number">02</span>
+          </div>
+          <div class="details">
+            <div>
+              <small>WEB APP / MARKETPLACE</small>
+              <h2>Real Estate Platform</h2>
+              <p>
+                A calm, visual property discovery experience for finding a place
+                that feels like home.
+              </p>
+              <div class="tags">
+                <span>React</span><span>Node.js</span><span>MongoDB</span>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </div>
+        </article>
+        <article>
+          <div class="visual">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85"
+              alt="E-commerce Store"
+            /><span class="number">03</span>
+          </div>
+          <div class="details">
+            <div>
+              <small>COMMERCE / EXPERIENCE</small>
+              <h2>E-commerce Store</h2>
+              <p>
+                A polished shopping flow designed to make browsing, choosing and
+                checking out effortless.
+              </p>
+              <div class="tags">
+                <span>Next.js</span><span>Stripe</span><span>CSS</span>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>© 2026 FATIMA EZZAHRAE LAHDILI</span><a href="/">BACK TO HOME ↑</a>
+    </footer>
+  </body>
+</html>
